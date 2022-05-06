@@ -57,7 +57,24 @@
       <!-- Step 3: Add webar-camera attribute to AFrame's <a-entity camera> tag -->
       <a-camera webar-camera></a-camera>
 
-      
+      <a-assets timeout="600000">
+        <a-asset-item id="testmodel1" src="models/MaterialsVariantsShoe.glb"></a-asset-item>
+        <a-asset-item id="testmodel2" src="models/astronaut.glb"></a-asset-item>
+      </a-assets>
+
+        <!-- Step 4: Add webar-marker attribute with a valid marker id value(obtained from Blippar hub), to AFrame's parent <a-entity> tag -->
+          <!-- The models defined as a child element under this webar-marker id, will be displayed on the marker image during marker image tracking -->
+        <a-entity webar-marker="id: dddddddd-uuuu-mmmm-mmmm-yyyyyyyyyyyy">
+          <!-- Step 5: Add AR models under the webar-marker nodes -->
+          <!-- Add webar-loadmonitor attribute to the entities to display loading progress screen before starting the surface tracking -->
+          <!-- Refer API Reference documentation for more details -->
+          <a-entity gltf-model="#testmodel1" id="testmodel_1" rotation="90 0 0" position="0 0 0" scale="5 5 5" webar-loadmonitor="elType: glb"></a-entity>
+        </a-entity>
+
+        <!-- Step 6: Add another webar-marker attribute with a valid marker id to another parent <a-entity> tag -->
+        <a-entity webar-marker="id: dddddddd-uuuu-mmmm-mmmm-yyyyyyyyyyyy">
+          <a-entity gltf-model="#testmodel2" id="testmodel_2" rotation="0 0 0" position="0 -0.5 0" scale="0.25 0.25 0.25" webar-loadmonitor="elType: glb"></a-entity>
+        </a-entity>
 
         <!-- Step 7: Add more <a-entity webar-marker="id: ..."> elements here, if required -->
 
