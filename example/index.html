@@ -63,13 +63,11 @@
       </a-assets>
 
       <!-- Step 4: Add webar-stage attribute to an AFrame's parent <a-entity> tag -->
-      <a-entity webar-stage>
+      <a-entity>
 
         <!-- Step 5: Add AR models under the webar-stage node -->
           <!-- Add webar-loadmonitor attribute to the entities to display loading progress screen before starting the surface tracking -->
           <!-- Refer API Reference documentation for more details -->
-          <a-entity gltf-model="#testmodel" id="testmodel_1" rotation="0 0 0" position="0 0 0" scale="0.25 0.25 0.25" webar-loadmonitor="elType: glb"></a-entity>
-          <a-entity gltf-model="#testmodel2" id="testmodel_2" rotation="0 0 0" position="0 0 0" scale="5 5 5" webar-loadmonitor="elType: glb"></a-entity>
       </a-entity>
       <a-entity webar-marker="id:33b3f6ee-a822-49e4-ae57-7117879687ef">
         <!-- Step 5: Add AR models under the webar-marker nodes -->
