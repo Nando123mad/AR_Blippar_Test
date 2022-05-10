@@ -29,7 +29,7 @@
 <body>
 
     <!-- START OUR A-FRAME SCENE -->
-    <a-scene loading-screen="backgroundColor: #344A60">
+    <a-scene loading-screen="backgroundColor: #000">
          <!-- Ask user for camera permissions, display some text if permission is denied -->
          <a-entity zappar-permissions-ui id="permissions"></a-entity>
          <!-- shows a full-page dialog that informs the user they're using an unsupported browser -->
@@ -38,7 +38,7 @@
         <!-- PRE-LOAD OUR ASSETS FOR PERFORMANCE -->
         <a-assets>
             <!-- PLANE BACKGROUND -->
-            <img id="card-plain" src="assets/BusinessCardPlain.png" />
+            <img id="card-plain" src="assets/Mad_Card.png" />
 
             <!-- MENU ITEMS -->
             <img id="web-icon" src="assets/WebLaunch.png"/>
@@ -54,7 +54,7 @@
         <a-camera zappar-camera cursor="rayOrigin: mouse; fuse: false;" raycaster="objects: .collidable"></a-camera>
 
         <!-- SET UP OUR EXPERIENCE AS IMAGE TRACKING & GIVE IT AN IMAGE TO TRACK -->
-        <a-entity zappar-image="target: assets/BusinessCard.zpt">
+        <a-entity zappar-image="target: assets/Mad_Image.zpt">
             <!-- Have a group that will only become visible when the target image comes into view-->
             <a-entity visibility-changer>
 
@@ -64,21 +64,21 @@
 
                 <!-- NAME AND JOB TITLE -->
                 <a-entity id="name-and-title">
-                    <a-entity id="name" text="font: https://cdn.aframe.io/fonts/Aileron-Semibold.fnt; value: Francesca Ellis; color: #FFF;" position="0.3 0 0" scale="3.5 3.5 3.5"></a-entity>
+                    <a-entity id="name" text="font: https://cdn.aframe.io/fonts/Aileron-Semibold.fnt; value: Fernando Rodriguez; color: #FFF;" position="0.3 0 0" scale="3.5 3.5 3.5"></a-entity>
                     <a-entity id="title" text="font: https://cdn.aframe.io/fonts/Aileron-Semibold.fnt; value: Junior Support Engineer; color: #FFF;" position="-0.2 -0.15 0" scale="2.5 2.5 2.5"></a-entity>
                 </a-entity>
                 <!-- END NAME AND JOB TITLE -->
 
                 <!-- MENU ITEMS -->
                 <a-entity id="menu-items">
-                    <a-image src="#web-icon" class="collidable" position="-1.2 0.6 0.3" mixin="iconProperties" link="href: https://zap.works; title: My Homepage;" animation="delay: 1000;"></a-image>
-                    <a-image src="#facebook-icon" class="collidable" position="-0.7 0.6 0.3" mixin="iconProperties" link="href: https://zap.works; title: My Facebook;" animation="delay: 2000;"></a-image>
-                    <a-image src="#phone-icon" class="collidable" position="-0.2 0.6 0.3" mixin="iconProperties" link="href: tel:123-456-7890p123; title: My Phone;" animation="delay: 3000;"></a-image>
+                    <a-image src="#web-icon" class="collidable" position="-1.2 0.6 0.3" mixin="iconProperties" link="href: https://yeswearemad.com; title: My Homepage;" animation="delay: 1000;"></a-image>
+                    <a-image src="#facebook-icon" class="collidable" position="-0.7 0.6 0.3" mixin="iconProperties" link="href: https://facebook.com; title: My Facebook;" animation="delay: 2000;"></a-image>
+                    <a-image src="#phone-icon" class="collidable" position="-0.2 0.6 0.3" mixin="iconProperties" link="href: tel:239-259-6214; title: My Phone;" animation="delay: 3000;"></a-image>
                 </a-entity>
                 <!-- END MENU ITEMS -->
 
                 <!-- ZAPPAR LOGO 3D MODEL (OVER BACKGROUND) SOUND EFFECTS OBTAINED FROM https://www.zapsplat.com - STANDARD LICENSE https://www.zapsplat.com/license-type/standard-license/ -->
-                <a-entity id="bolt" gltf-model="assets/ZapparLog.glb" class="collidable" position="0.6 0 0.3" scale="2 1.9 2" sound="src: url(assets/zapsplat_laser.mp3); on: click;"></a-entity>
+                <a-entity id="bolt" gltf-model="models/astronaut.glb" class="collidable" position="0.6 0 0.3" scale="2 2 2" sound="src: url(assets/zapsplat_laser.mp3); on: click;"></a-entity>
 
                 <!-- CALL TO ACTION TEXT -->
                 <a-entity id="cta" text="font: https://cdn.aframe.io/fonts/Aileron-Semibold.fnt; value: Tap on an icon to \n find out more!; color: #FFF; align: center;" position="-0.7 -0.5 0.3" scale="3 3 3"></a-entity>
