@@ -46,6 +46,7 @@
             <img id="phone-icon" src="assets/Phone.png"/>
             <!-- MENU ITEM MIXIN -->
             <a-mixin id="iconProperties" scale="0.4 0.4 0.4" material="alpha-test:0.5" animation="property: scale; to: 0.5 0.5 0.5; dir: alternate; dur: 2000; loop:true;"></a-mixin>
+            <a-mixin id="AstroProperties" scale="0.75 0.75 0.75" animation="property: scale; to: 0.65 0.65 0.65; dir: alternate; dur: 2000; loop:true;"></a-mixin>
         </a-assets>
         <!-- END ASSET PRE-LOADING -->
 
@@ -60,25 +61,25 @@
 
                 <!-- REMEMBER - 3D OBJECTS TRACK FROM THE CENTER OF THE IMAGE -->
                 <!-- ANIMATED PLANE BACKGROUND -->
-                <a-image id="card-background" src="#card-plain" height="3" width="3" position="0 0 0" material="alpha-test:0.5"></a-image>
+                <a-image id="card-background" src="#card-plain" height="2" width="2" position="0 0 0" material="alpha-test:0.5"></a-image>
 
                 <!-- NAME AND JOB TITLE -->
                 <a-entity id="name-and-title">
-                    <a-entity id="name" text="font: https://cdn.aframe.io/fonts/Aileron-Semibold.fnt; value: Fernando Rodriguez; color: #FFF;" position="0.3 0 0" scale="3.5 3.5 3.5"></a-entity>
-                    <a-entity id="title" text="font: https://cdn.aframe.io/fonts/Aileron-Semibold.fnt; value: Junior Support Engineer; color: #FFF;" position="-0.2 -0.15 0" scale="2.5 2.5 2.5"></a-entity>
+                    <a-entity id="name" text="font: https://cdn.aframe.io/fonts/Aileron-Semibold.fnt; value: Fernando Rodriguez; color: #FFF;" position="0 2.6 0.3" scale="3.5 3.5 3.5"></a-entity>
+                    <a-entity id="title" text="font: https://cdn.aframe.io/fonts/Aileron-Semibold.fnt; value: Junior Support Engineer; color: #FFF;" position="0 2.6 0.3" scale="2.5 2.5 2.5"></a-entity>
                 </a-entity>
                 <!-- END NAME AND JOB TITLE -->
 
                 <!-- MENU ITEMS -->
                 <a-entity id="menu-items">
-                    <a-image src="#web-icon" class="collidable" position="-1.2 -0.6 0.3" mixin="iconProperties" link="href: https://yeswearemad.com; title: My Homepage;" animation="delay: 1000;"></a-image>
-                    <a-image src="#facebook-icon" class="collidable" position="-0.7 -0.6 0.3" mixin="iconProperties" link="href: https://facebook.com; title: My Facebook;" animation="delay: 2000;"></a-image>
-                    <a-image src="#phone-icon" class="collidable" position="-0.2 -0.6 0.3" mixin="iconProperties" link="href: tel:239-259-6214; title: My Phone;" animation="delay: 3000;"></a-image>
+                    <a-image src="#web-icon" class="collidable" position="0 -2.6 0.3" mixin="iconProperties" link="href: https://yeswearemad.com; title: My Homepage;" animation="delay: 1000;"></a-image>
+                    <a-image src="#facebook-icon" class="collidable" position="0 -2.6 0.3" mixin="iconProperties" link="href: https://facebook.com; title: My Facebook;" animation="delay: 2000;"></a-image>
+                    <a-image src="#phone-icon" class="collidable" position="0 -2.6 0.3" mixin="iconProperties" link="href: tel:239-259-6214; title: My Phone;" animation="delay: 3000;"></a-image>
                 </a-entity>
                 <!-- END MENU ITEMS -->
 
                 <!-- ZAPPAR LOGO 3D MODEL (OVER BACKGROUND) SOUND EFFECTS OBTAINED FROM https://www.zapsplat.com - STANDARD LICENSE https://www.zapsplat.com/license-type/standard-license/ -->
-                <a-entity id="bolt" gltf-model="models/astronaut.glb" class="collidable" position="0.6 -0.6 0.3" scale="0.75 0.75 0.75" sound="src: url(assets/zapsplat_laser.mp3); on: click;"></a-entity>
+                <a-entity id="bolt" gltf-model="models/astronaut.glb" mixin="AstroProperties" class="collidable" position="0 -2 0.3" scale="0.75 0.75 0.75" sound="src: url(assets/zapsplat_laser.mp3); on: click;"></a-entity>
 
                 <!-- CALL TO ACTION TEXT -->
                 <a-entity id="cta" text="font: https://cdn.aframe.io/fonts/Aileron-Semibold.fnt; value: Tap on an icon to \n find out more!; color: #FFF; align: center;" position="-0.7 -1.1 0.3" scale="3 3 3"></a-entity>
