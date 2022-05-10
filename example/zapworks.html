@@ -17,8 +17,8 @@
 <body>
       <a-scene>
           <a-assets>
-            <a-asset-item id="target-file" src="https://cdn.glitch.global/f10ac4ef-fb87-4be5-b92c-8822ca26c827/img.jpg?v=1652199751381"/>
-            <a-asset-item id="model" src="https://cdn.glitch.global/f10ac4ef-fb87-4be5-b92c-8822ca26c827/model.glb?v=1652199032528"/>
+            <a-asset-item id="target-file" src="images/test_issue_img.png"/>
+            <a-asset-item id="model" src="models/astronaut.glb"/>
           </a-assets>
           <!-- Ask user for camera permissions, display some text if permission is denied -->
           <a-entity zappar-permissions-ui id="permissions">
@@ -28,9 +28,11 @@
           <a-entity camera zappar-camera></a-entity>
         
           <a-entity zappar-image="#target-file">
-              <!-- YOUR 3D CONTENT GOES HERE -->
-             <a-entity gltf-model="#model" id="modelIMG" rotation="0 0 0" position="0 0 0" scale="5 5 5" webar-loadmonitor="elType: glb"></a-entity>
-          </a-entity>
+            <a-entity visibility-changer>
+                <!-- YOUR 3D CONTENT GOES HERE -->
+                <a-entity gltf-model="#model" id="modelIMG" rotation="0 0 0" position="0 0 0" scale="5 5 5" webar-loadmonitor="elType: glb"></a-entity>
+            </a-entity>
+        </a-entity>
       </a-scene>
   </body>
 </html>
